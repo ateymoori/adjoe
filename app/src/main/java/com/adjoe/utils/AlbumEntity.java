@@ -1,0 +1,43 @@
+package com.adjoe.utils;
+
+public class AlbumEntity implements Comparable<AlbumEntity>{
+
+    private Integer userId;
+    private Integer id;
+    private String title;
+
+    public AlbumEntity(Integer userId, Integer id, String title) {
+        this.userId = userId;
+        this.id = id;
+        this.title = title;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public int compareTo(AlbumEntity albumEntity) {
+        return this.getId().compareTo(albumEntity.getId());
+    }
+}
